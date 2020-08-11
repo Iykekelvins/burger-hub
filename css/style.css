@@ -31,6 +31,16 @@ html{
     padding:1rem;
 }
 
+#social-icons{
+    display: flex;
+    color:white;
+}
+
+#social-icons li{
+    list-style: none;
+    padding:15px;
+}
+
 #main{
   position: absolute;
   z-index: 999;
@@ -75,6 +85,36 @@ html{
     background-color:  #b85527;
 }
 
+section {
+    font-family: 'Poppins', sans-serif;
+}
+
+section span{
+    color:#b85527;
+}
+section h2{
+    text-align: center;
+    padding-top:20px;
+    color:#b85527;
+}
+
+section p{
+    padding:20px;
+    text-align: center;
+}
+
+footer{
+    background-color: hsl(192, 100%, 9%);
+    color:white;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer p{
+    font-weight: 200;
+    text-align: center;
+    margin:0 auto;
+    padding-top:50px;
+}
 
 @media screen and (min-width:769px){
     .nav-content{
@@ -88,6 +128,9 @@ html{
     .links{
         padding:1rem;
     }
+    .links-container{
+        height: auto !important;
+    }
     .links a:hover{
         text-decoration: underline #b85527;
     }
@@ -96,30 +139,24 @@ html{
         padding:10px;
         font-size: 1.2em;
     }
-    footer{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        background-color: hsl(192, 100%, 9%);
-        column-gap: 25px;
-        color:white;
-        font-family: 'Poppins', sans-serif;
-        padding:30px;
-    }
-    footer p{
-        font-weight:200;
+    #about{
+        background-color:white;
+        height:50vh;
     }
     
-    #about{
-        border-right:1px solid black;
+    #reviews{
+        height:50vh;
+        background-color:hsl(210, 36%, 96%);
     }
+   
 }
 
 @media screen and (max-width:768px) {
-    .links{
-        overflow:hidden;
-        height:0;
-        display:block;
-    }
+    .links-container {
+        height: 0;
+        overflow: hidden;
+        transition: ease-in-out 0.3s;
+      }
     .nav-toggle{
         font-size: 1.5rem;
         color:white;
@@ -144,27 +181,11 @@ html{
         height:15rem;
         transition: ease-in-out 0.5s;
     }
-    footer{
-        display: grid;
-        grid-template-rows: 50% 50%;
-        background-color: hsl(192, 100%, 9%);
-        row-gap: 25px;
-        color:white;
-        font-family: 'Poppins', sans-serif;
-        padding:30px;
+    #reviews{
+        background-color:hsl(210, 36%, 96%);
     }
-    footer h3{
-        text-align: center;
-    }
-    footer p{
-        font-weight: 200;
-        text-align: center;
-    }
-    #about{
-        border-bottom:1px solid black;
-    }
-    #about p{
-        margin-bottom:10px;
+    section p{
+        padding-bottom:30px;
     }
 }
 
